@@ -35,11 +35,11 @@ scrape_configs:
       - targets: ['pushgateway:9091']
   - job_name: 'FacebookApi'
     scrape_interval: 10s
-    metrics_path: /facebookapp/metrics
+    metrics_path: /metrics
     scheme: http
     honor_labels: true
     static_configs:
-      - targets: ['dev.comm100dev.com']
+      - targets: ['dev.comm100dev.com/facebookapp']
 
 alerting:
   alertmanagers:
