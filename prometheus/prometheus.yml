@@ -39,14 +39,20 @@ scrape_configs:
     scheme: https
     honor_labels: true
     static_configs:
-      - targets: ['dev.comm100dev.com']
+      - targets: ['FacebookApi']
+    relabel_configs:
+      - target_label: __address__
+        replacement: dev.comm100dev.com
   - job_name: 'TwitterApi'
     scrape_interval: 10s
     metrics_path: /twitterapp/metrics
     scheme: https
     honor_labels: true
     static_configs:
-      - targets: ['dev.comm100dev.com']
+      - targets: ['TwitterApi']
+    relabel_configs:
+      - target_label: __address__
+        replacement: dev.comm100dev.com
   - job_name: 'WechatApi'
     scrape_interval: 10s
     metrics_path: /wechatapp/metrics
