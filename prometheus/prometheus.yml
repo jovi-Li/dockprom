@@ -40,7 +40,7 @@ scrape_configs:
     honor_labels: true
     static_configs:
       - targets: ['dev.comm100dev.com']
-      - labels : [facebook]
+      - labels : [my:facebook]
   - job_name: 'TwitterApi'
     scrape_interval: 10s
     metrics_path: /twitterapp/metrics
@@ -48,7 +48,7 @@ scrape_configs:
     honor_labels: true
     static_configs:
       - targets: ['dev.comm100dev.com']
-      - labels : [twitter]
+      - labels : [my:twitter]
 alerting:
   alertmanagers:
   - scheme: http
