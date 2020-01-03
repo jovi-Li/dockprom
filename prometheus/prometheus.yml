@@ -38,7 +38,7 @@ scrape_configs:
     scrape_interval: 10s
     scrape_timeout: 10s 
     metrics_path: /metrics 
-    scheme: https 
+    scheme: http 
     honor_labels: true
     static_configs:
       - targets: ['dev.comm100dev.com/wechatapp']
