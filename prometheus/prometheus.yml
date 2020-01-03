@@ -37,9 +37,10 @@ scrape_configs:
     scrape_interval: 10s
     metrics_path: /metrics
     scheme: http
+    __metrics_path__:/facebookapp
     honor_labels: true
     static_configs:
-      - targets: ['dev.comm100dev.com/facebookapp']
+      - targets: ['dev.comm100dev.com']
 
 alerting:
   alertmanagers:
